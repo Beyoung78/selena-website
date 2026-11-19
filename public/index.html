@@ -51,10 +51,12 @@ html[lang="en"] .lang [data-l="en"],html[lang="es"] .lang [data-l="es"]{backgrou
 
 /* hero */
 .hero{position:relative;height:100vh;height:100dvh;min-height:640px;overflow:hidden;display:flex;align-items:flex-end;background:var(--esp);color:#fff}
-.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .media{position:absolute;inset:0}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
 .hero video{opacity:0;transition:opacity 1s}
 .hero video.ready{opacity:1}
-@media(max-width:860px){.hero video,.hero .poster{object-position:64% center}}
+@media(max-width:860px){.hero video,.hero .poster{object-position:center top}}
+@media(min-width:861px){.hero .media{left:40%}.hero::before{background:linear-gradient(90deg,var(--esp) 0%,var(--esp) 40%,rgba(22,16,12,.55) 47%,rgba(22,16,12,0) 60%),linear-gradient(0deg,rgba(22,16,12,.6) 0%,rgba(22,16,12,0) 30%)!important}}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(22,16,12,.95) 0%,rgba(22,16,12,.45) 38%,rgba(22,16,12,0) 65%),linear-gradient(90deg,rgba(22,16,12,.7) 0%,rgba(22,16,12,0) 60%)}
 .hero-copy{position:relative;z-index:2;width:100%;max-width:1000px;padding:0 clamp(18px,6vw,96px) clamp(60px,10vh,110px);display:flex;flex-direction:column;gap:20px}
 .kicker{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold2)}
@@ -135,8 +137,37 @@ h2 em{color:var(--gold)}
 .btn-out{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;border:1.5px solid var(--ink);font-weight:700;text-decoration:none;width:max-content;transition:background .25s,color .25s}
 .btn-out:hover{background:var(--ink);color:var(--gold2)}
 
+
+/* wishlist band */
+.wish{display:grid;grid-template-columns:1fr 1fr;min-height:620px;background:var(--esp);color:#F6EDE1}
+.wish-img{position:relative;overflow:hidden}
+.wish-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.wish-txt{display:flex;flex-direction:column;justify-content:center;gap:22px;padding:clamp(40px,7vw,110px)}
+.wish .eyebrow{color:var(--gold2)}.wish h2 em{color:var(--gold2)}.wish .p{color:rgba(246,237,225,.72);max-width:38ch}
+.wish .btn-gold{width:max-content}
+@media(max-width:860px){.wish{grid-template-columns:1fr}.wish-img{min-height:460px}.wish .btn-gold{width:100%}}
+/* collaborations */
+.collab{padding:clamp(90px,12vw,170px) 0;background:var(--paper);text-align:center}
+.collab .wrap{display:flex;flex-direction:column;align-items:center;gap:26px;max-width:980px}
+.collab h2{font-size:clamp(48px,7vw,104px)}
+.rule{display:flex;align-items:center;gap:16px;width:min(360px,70%);color:var(--gold)}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--gold)}
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,3vw,48px);margin:10px 0;padding:0;list-style:none;width:100%}
+.cats li{display:flex;flex-direction:column;align-items:center;gap:10px;padding:26px 10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cats b{font-family:var(--serif);font-style:italic;font-weight:400;font-size:30px;color:var(--gold)}
+.cats span{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.collab .p{max-width:52ch}
+.mail-xl{font-family:var(--serif);font-style:italic;font-size:clamp(26px,4vw,52px);text-decoration:none;color:var(--ink);background:linear-gradient(var(--gold),var(--gold)) 0 100%/0 1px no-repeat;padding-bottom:6px;transition:background-size .5s;word-break:break-all}
+.mail-xl:hover{background-size:100% 1px}
+@media(max-width:700px){.cats{grid-template-columns:1fr}.cats li{padding:16px 10px}}
+
 /* footer */
-footer{background:var(--esp);color:rgba(246,237,225,.7);padding:56px 0}
+footer{background:var(--esp);color:rgba(246,237,225,.6);padding:clamp(70px,9vw,120px) 0 40px}
+.foot-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px;padding-bottom:48px;border-bottom:1px solid rgba(230,199,126,.2);margin-bottom:28px}
+.foot-sign{font-family:var(--serif);font-size:clamp(54px,9vw,140px);line-height:.9;color:#F6EDE1}
+.foot-sign em{color:var(--gold2)}
+.foot-links a{text-decoration:none}.foot-links a:hover{color:var(--gold2)}
+.foot-links{display:flex;flex-wrap:wrap;gap:22px;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:22px;font-size:14px}
 .foot .logo{color:var(--gold2)}
 .foot a{text-decoration:none}.foot a:hover{color:#fff}
@@ -169,12 +200,14 @@ footer{background:var(--esp);color:rgba(246,237,225,.7);padding:56px 0}
 </header>
 
 <main>
-  <section class="hero" id="top" aria-label="Selena on a rooftop at golden hour">
-    <picture>
-      <source media="(max-width:860px)" srcset="assets/hero-mobile.jpg">
-      <img class="poster" src="assets/hero.jpg" alt="" fetchpriority="high">
-    </picture>
-    <video id="film" muted playsinline loop preload="auto" aria-hidden="true"></video>
+  <section class="hero" id="top" aria-label="Selena laughing in the golden afternoon sun">
+    <div class="media">
+      <picture>
+        <source media="(max-width:860px)" srcset="assets/hero-mobile.jpg">
+        <img class="poster" src="assets/hero.jpg" alt="" fetchpriority="high">
+      </picture>
+      <video id="film" muted playsinline loop preload="auto" aria-hidden="true"></video>
+    </div>
     <div class="hero-copy">
       <span class="kicker" data-i18n="kicker">Travel · Fitness · Style</span>
       <h1>Selena<span class="luna">Luna</span></h1>
@@ -276,34 +309,43 @@ footer{background:var(--esp);color:rgba(246,237,225,.7);padding:56px 0}
     </div>
   </section>
 
-  <section class="section" id="brands" style="padding-top:0">
-    <div class="wrap duo">
-      <div class="box rv">
-        <div>
-          <p class="eyebrow" data-i18n="w_eye">Wishlist</p>
-          <p class="t" data-i18n="w_t">Spoil me a little.</p>
-          <p class="p" style="font-size:16px;margin-top:10px" data-i18n="w_p">My wishlist on Throne. Gifts are always a surprise, and every one gets a thank-you.</p>
-        </div>
-        <a class="btn-out" href="https://throne.com/selenaluna" target="_blank" rel="noopener"><span data-i18n="w_cta">Open my wishlist</span> →</a>
-      </div>
-      <div class="box rv">
-        <div>
-          <p class="eyebrow" data-i18n="b_eye">Brands &amp; collaborations</p>
-          <p class="t" data-i18n="b_t">Let's create together.</p>
-          <p class="p" style="font-size:16px;margin:10px 0 16px" data-i18n="b_p">Campaigns in travel, fashion, beauty, fitness and lifestyle. Send me your idea.</p>
-          <a class="mail" href="mailto:contact.selenaluna@gmail.com">contact.selenaluna@gmail.com</a>
-        </div>
-        <a class="btn-dark" href="mailto:contact.selenaluna@gmail.com?subject=Collaboration%20with%20Selena%20Luna"><span data-i18n="b_cta">Write me</span> →</a>
-      </div>
+  <section class="wish" id="wishlist">
+    <div class="wish-img rv"><img src="assets/img/s2.jpg" alt="Selena in a silver dress by the pool at night" loading="lazy"></div>
+    <div class="wish-txt rv">
+      <p class="eyebrow" data-i18n="w_eye">Wishlist</p>
+      <h2 data-i18n="w_t2">Spoil me <em>a little.</em></h2>
+      <p class="p" data-i18n="w_p">My wishlist on Throne. Gifts are always a surprise, and every one gets a thank-you.</p>
+      <a class="btn-gold" href="https://throne.com/selenaluna" target="_blank" rel="noopener"><span data-i18n="w_cta">Open my wishlist</span>
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+    </div>
+  </section>
+
+  <section class="collab" id="brands">
+    <div class="wrap">
+      <p class="eyebrow rv" data-i18n="b_eye">Brands &amp; collaborations</p>
+      <h2 class="rv" data-i18n="b_t2">Let's create <em>together.</em></h2>
+      <div class="rule rv" aria-hidden="true"><span>✦</span></div>
+      <ol class="cats rv">
+        <li><b>I</b><span data-i18n="cat1">Travel &amp; Hotels</span></li>
+        <li><b>II</b><span data-i18n="cat2">Fashion &amp; Beauty</span></li>
+        <li><b>III</b><span data-i18n="cat3">Fitness &amp; Lifestyle</span></li>
+      </ol>
+      <p class="p rv" data-i18n="b_p2">Campaigns, content and collaborations for brands that love the good life as much as I do. Tell me your idea.</p>
+      <a class="mail-xl rv" href="mailto:contact.selenaluna@gmail.com?subject=Collaboration%20with%20Selena%20Luna">contact.selenaluna@gmail.com</a>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <span class="logo">Selena Luna</span>
-    <span style="display:flex;flex-wrap:wrap;gap:18px"><a href="https://www.instagram.com/selenaluna03/" target="_blank" rel="noopener">Instagram</a><a href="https://fanstories.com/selenaluna03" target="_blank" rel="noopener">FanStories</a><a href="https://throne.com/selenaluna" target="_blank" rel="noopener">Throne</a></span>
-    <span style="display:flex;flex-wrap:wrap;gap:18px;align-items:center"><button class="legal-link" id="legal-open" type="button" data-i18n="lg_link">Legal &amp; Privacy</button><span>© 2026 Selena Luna</span></span>
+  <div class="wrap">
+    <div class="foot-top">
+      <span class="foot-sign">Selena <em>Luna</em></span>
+      <nav class="foot-links" aria-label="Social"><a href="https://www.instagram.com/selenaluna03/" target="_blank" rel="noopener">Instagram</a><a href="https://fanstories.com/selenaluna03" target="_blank" rel="noopener">FanStories</a><a href="https://throne.com/selenaluna" target="_blank" rel="noopener">Throne</a><a href="mailto:contact.selenaluna@gmail.com">Email</a></nav>
+    </div>
+    <div class="foot">
+      <span data-i18n="ft_line">Travel · Fitness · Style</span>
+      <span style="display:flex;flex-wrap:wrap;gap:18px;align-items:center"><button class="legal-link" id="legal-open" type="button" data-i18n="lg_link">Legal &amp; Privacy</button><span>© 2026 Selena Luna</span></span>
+    </div>
   </div>
 </footer>
 
@@ -335,7 +377,7 @@ footer{background:var(--esp);color:rgba(246,237,225,.7);padding:56px 0}
     members:'Solo miembros', pv_eye:'Solo miembros', pv_h:'El lado <em>privado.</em>',
     pv_p:'Sesiones de fotos exclusivas, momentos detrás de cámaras y chats privados. Todo lo que nunca llega a Instagram está en mi FanStories.',
     pk1:'Sesiones de fotos exclusivas', pk1v:'Cada semana', pk2:'Detrás de cámaras', pk2v:'Primero para ti', pk3:'Chats privados', pk3v:'Incluido',
-    w_eye:'Lista de deseos', w_t:'Consiénteme un poquito.', w_p:'Mi lista de deseos en Throne. Los regalos siempre son una sorpresa, y cada uno recibe un gracias.', w_cta:'Ver mi lista',
+    w_eye:'Lista de deseos', w_t2:'Consiénteme <em>un poquito.</em>', b_t2:'Creemos algo <em>juntos.</em>', cat1:'Viajes y hoteles', cat2:'Moda y belleza', cat3:'Fitness y estilo de vida', b_p2:'Campañas, contenido y colaboraciones para marcas que aman la buena vida tanto como yo. Cuéntame tu idea.', ft_line:'Viajes · Fitness · Estilo', w_t:'Consiénteme un poquito.', w_p:'Mi lista de deseos en Throne. Los regalos siempre son una sorpresa, y cada uno recibe un gracias.', w_cta:'Ver mi lista',
     b_eye:'Marcas y colaboraciones', b_t:'Creemos algo juntos.', b_p:'Campañas de viajes, moda, belleza, fitness y estilo de vida. Envíame tu idea.', b_cta:'Escríbeme',
     lg_link:'Aviso legal y privacidad', lg_h:'Aviso legal y privacidad', lg_1h:'Sobre este sitio',
     lg_1p:'Este es el sitio oficial de Selena Luna. Para preguntas, solicitudes o asuntos legales, escribe a <a href="mailto:contact.selenaluna@gmail.com">contact.selenaluna@gmail.com</a>.',
