@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selena Luna</title>
+<meta name="description" content="Travel, fitness and style. The everyday story on Instagram, the private side only for members.">
+<meta property="og:title" content="Selena Luna">
+<meta property="og:description" content="Travel, fitness and style. The private side only for members.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://theselenaluna.com/assets/img/cover.jpg">
+<meta property="og:url" content="https://theselenaluna.com/">
+<link rel="canonical" href="https://theselenaluna.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="assets/poster.jpg">
+<style>
+@font-face{font-family:"Bodoni Moda";font-style:normal;font-weight:400 900;font-display:swap;src:url(assets/fonts/bodoni-moda-latin-opsz-normal.woff2) format("woff2-variations"),url(assets/fonts/bodoni-moda-latin-opsz-normal.woff2) format("woff2")}
+@font-face{font-family:"Bodoni Moda";font-style:italic;font-weight:400 900;font-display:swap;src:url(assets/fonts/bodoni-moda-latin-opsz-italic.woff2) format("woff2-variations"),url(assets/fonts/bodoni-moda-latin-opsz-italic.woff2) format("woff2")}
+@font-face{font-family:Manrope;font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/manrope-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Manrope;font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/manrope-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Manrope;font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/manrope-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:Manrope;font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/manrope-latin-700-normal.woff2) format("woff2")}
+
+:root{--bg:#0E0B09;--card:#17120E;--card2:#1B1510;--ink:#F4EDE3;--muted:#CDBFAE;--dim:#A69684;--line:#2E251D;--line2:#3A2E23;--gold:#E6C99A;--serif:"Bodoni Moda",Georgia,serif;--sans:Manrope,system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+::selection{background:var(--gold);color:var(--bg)}
+img{display:block;max-width:100%}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding:20px clamp(18px,4vw,48px);transition:background .4s,backdrop-filter .4s}
+.nav.solid{background:rgba(14,11,9,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.wordmark{font-family:var(--serif);font-size:21px;letter-spacing:.34em;text-decoration:none}
+.links{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(14px,2.4vw,30px);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.links a{text-decoration:none;color:var(--muted);transition:color .25s}
+.links a:hover{color:var(--ink)}
+.nav-join{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;background:var(--gold);color:var(--bg)!important;font-weight:700}
+@media(max-width:760px){.hide-sm{display:none}}
+
+/* scroll film */
+.film{position:relative;height:360vh;background:var(--bg)}
+.stage{position:sticky;top:0;height:100vh;height:100dvh;overflow:hidden}
+.stage video,.stage .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stage video{opacity:0;transition:opacity .4s}
+.stage video.ready{opacity:1}
+@media(max-width:860px){.stage video,.stage .poster{object-position:64% center}}
+.stage::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(14,11,9,.75) 0%,rgba(14,11,9,.25) 48%,rgba(14,11,9,0) 72%),linear-gradient(0deg,rgba(14,11,9,.9) 0%,rgba(14,11,9,0) 34%)}
+.copy{position:absolute;z-index:2;left:clamp(18px,6vw,96px);bottom:clamp(60px,12vh,140px);max-width:640px;display:flex;flex-direction:column;gap:22px}
+.kicker{margin:0;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.copy h1{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(46px,6.6vw,108px);line-height:.98;letter-spacing:-.02em}
+.copy h1 em{color:var(--gold)}
+.copy p.lead{margin:0;font-size:clamp(16px,1.35vw,19px);line-height:1.6;color:var(--muted);max-width:34ch}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.cta-join{display:inline-flex;align-items:center;gap:12px;min-height:54px;padding:0 26px;border-radius:999px;background:var(--gold);color:var(--bg);font-weight:700;font-size:16px;text-decoration:none;transition:transform .3s,box-shadow .3s}
+.cta-join:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(230,201,154,.28)}
+.cta-join svg{transition:transform .3s}
+.cta-join:hover svg{transform:translateX(4px)}
+.cta-follow{display:inline-flex;align-items:center;min-height:54px;padding:0 24px;border-radius:999px;border:1px solid rgba(244,237,227,.35);color:var(--ink);font-weight:600;text-decoration:none;background:rgba(14,11,9,.25);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:border-color .3s}
+.cta-follow:hover{border-color:var(--gold)}
+.progress{position:absolute;z-index:3;right:clamp(18px,4vw,48px);top:50%;transform:translateY(-50%);width:2px;height:160px;background:rgba(244,237,227,.18);border-radius:2px;overflow:hidden}
+.progress span{display:block;width:100%;height:100%;background:var(--gold);transform-origin:top;transform:scaleY(0)}
+.hint{position:absolute;z-index:3;left:50%;bottom:22px;transform:translateX(-50%);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim);transition:opacity .4s}
+
+/* sections */
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+.section{padding-top:clamp(80px,11vw,140px)}
+.eyebrow{margin:0;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h2{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(38px,4.6vw,68px);line-height:1.03}
+h2 em{color:var(--gold)}
+.p{margin:0;font-size:18px;line-height:1.7;color:var(--muted)}
+.ribbon{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px 28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0;font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.4vw,32px);color:var(--muted)}
+.ribbon i{color:var(--gold);font-style:normal}
+.about{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(36px,6vw,80px)}
+.about figure{flex:1 1 360px;margin:0;max-width:560px}
+.about figure img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:26px}
+.about .txt{flex:1 1 360px;display:flex;flex-direction:column;gap:22px}
+.feed-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;padding-bottom:28px}
+.feed-link{font-size:14px;font-weight:600;letter-spacing:.08em;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:4px}
+.feed{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.feed figure{margin:0;overflow:hidden;border-radius:18px}
+.feed img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.feed figure:hover img{transform:scale(1.04)}
+.private{display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,64px);align-items:stretch;background:var(--card2);border:1px solid var(--line2);border-radius:30px;padding:clamp(22px,4vw,56px)}
+.private figure{flex:1 1 300px;margin:0;max-width:460px;position:relative;overflow:hidden;border-radius:22px;min-height:440px}
+.private figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.lock{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;color:var(--gold)}
+.lock span{font-size:12px;letter-spacing:.28em;text-transform:uppercase}
+.private .txt{flex:1 1 340px;display:flex;flex-direction:column;gap:20px;justify-content:center}
+.perks{list-style:none;margin:4px 0 0;padding:0}
+.perks li{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid var(--line2);font-size:16px}
+.perks li span:last-child{color:var(--gold)}
+.cta-private{margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:0 28px;border-radius:18px;background:var(--gold);color:var(--bg);font-weight:700;font-size:18px;text-decoration:none;transition:letter-spacing .35s}
+.cta-private:hover{letter-spacing:.04em}
+.wish{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:clamp(28px,4vw,48px);border-radius:26px;border:1px solid var(--gold);background:linear-gradient(120deg,rgba(230,201,154,.08),rgba(230,201,154,0) 60%)}
+.wish .t{font-family:var(--serif);font-style:italic;font-size:clamp(30px,3.4vw,46px);margin:0 0 8px}
+.cta-wish{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;border:1px solid var(--gold);text-decoration:none;font-weight:600;transition:background .3s,color .3s}
+.cta-wish:hover{background:var(--gold);color:var(--bg)}
+.collab{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:clamp(28px,4vw,48px);border-radius:26px;background:var(--card);border:1px solid var(--line)}
+.collab .mail{font-family:var(--serif);font-size:clamp(22px,2.6vw,34px);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:4px;word-break:break-all}
+.cta-mail{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;background:var(--gold);color:var(--bg);font-weight:700;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:700}
+footer{padding:clamp(80px,11vw,140px) 0 56px}
+.foot{border-top:1px solid var(--line);padding-top:36px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px;font-size:14px;color:var(--dim)}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--ink)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.film{height:100vh}.hint,.progress{display:none}}
+</style>
+</head>
+<body>
+<header class="nav" id="nav">
+  <a class="wordmark" href="#top">SELENA LUNA</a>
+  <nav class="links" aria-label="Main">
+    <a class="hide-sm" href="#about">About</a>
+    <a class="hide-sm" href="#feed">Feed</a>
+    <a class="hide-sm" href="#wishlist">Wishlist</a>
+    <a class="hide-sm" href="#contact">Brands</a>
+    <a class="nav-join" href="https://fanstories.com/selenaluna03" target="_blank" rel="noopener">Join me</a>
+  </nav>
+</header>
+
+<main>
+  <section class="film" id="top" aria-label="Selena on her rooftop at blue hour">
+    <div class="stage">
+      <picture>
+        <source media="(max-width:860px)" srcset="assets/poster-mobile.jpg">
+        <img class="poster" src="assets/poster.jpg" alt="" fetchpriority="high">
+      </picture>
+      <video id="film" muted playsinline preload="none" aria-hidden="true"></video>
+      <div class="copy">
+        <p class="kicker">Travel, fitness and style</p>
+        <h1>Life, slightly<br><em>more cinematic.</em></h1>
+        <p class="lead">Golden hours, rooftop nights and slow mornings. The everyday story lives on Instagram. The rest is only for members.</p>
+        <div class="actions">
+          <a class="cta-join" href="https://fanstories.com/selenaluna03" target="_blank" rel="noopener">Join me on FanStories
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+          </a>
+          <a class="cta-follow" href="https://www.instagram.com/selenaluna03/" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-right:10px"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg>Follow on Instagram</a>
+        </div>
+      </div>
+      <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+      <div class="hint" id="hint" aria-hidden="true">Scroll</div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="section" aria-label="Highlights">
+      <div class="ribbon"><span>Golden hour</span><i aria-hidden="true">✦</i><span>Rooftop yoga</span><i aria-hidden="true">✦</i><span>First class</span><i aria-hidden="true">✦</i><span>Slow Sundays</span></div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="about">
+        <figure><img src="assets/img/about.jpg" alt="Selena walking along the beach at golden hour in a white linen dress" loading="lazy"></figure>
+        <div class="txt">
+          <p class="eyebrow">Hi, I'm Selena</p>
+          <h2>Warm heart,<br><em>expensive taste.</em></h2>
+          <p class="p">I love sunsets, sweat sessions and a good outfit change. Follow along for travel, fitness and style, and come closer if you want the moments I don't post anywhere else.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="feed">
+      <div class="feed-head">
+        <h2>The <em>feed</em></h2>
+        <a class="feed-link" href="https://www.instagram.com/selenaluna03/" target="_blank" rel="noopener">Follow @selenaluna03 on Instagram</a>
+      </div>
+      <div class="feed">
+        <figure><img src="assets/img/jet.jpg" alt="Selena with champagne in a private jet cabin" loading="lazy"></figure>
+        <figure><img src="assets/img/yoga.jpg" alt="Selena doing yoga on a rooftop at sunrise" loading="lazy"></figure>
+        <figure><img src="assets/img/bw.jpg" alt="Black and white portrait of Selena in a white shirt" loading="lazy"></figure>
+        <figure><img src="assets/img/cafe.jpg" alt="Selena laughing at a colorful street cafe" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section class="section" id="private">
+      <div class="private">
+        <figure>
+          <img src="assets/img/private.jpg" alt="" loading="lazy">
+          <div class="lock">
+            <svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            <span>Members only</span>
+          </div>
+        </figure>
+        <div class="txt">
+          <p class="eyebrow">Members only</p>
+          <h2>The <em>private</em> side.</h2>
+          <p class="p">Exclusive photo sets, behind-the-scenes moments and personal messages. Everything that never makes it to Instagram lives on my FanStories.</p>
+          <ul class="perks">
+            <li><span>Exclusive photo sets</span><span>Every week</span></li>
+            <li><span>Personal messages</span><span>Included</span></li>
+            <li><span>Special sets and bundles</span><span>Members first</span></li>
+          </ul>
+          <a class="cta-private" href="https://fanstories.com/selenaluna03" target="_blank" rel="noopener"><span>Join me on FanStories</span>
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="wishlist">
+      <div class="wish">
+        <div>
+          <p class="t">Spoil me a little</p>
+          <p class="p" style="font-size:16px">My wishlist on Throne. Gifts are always a surprise.</p>
+        </div>
+        <a class="cta-wish" href="https://throne.com/selenaluna" target="_blank" rel="noopener">Open my wishlist
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="collab">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <p class="eyebrow">Brands &amp; collaborations</p>
+          <h2>Let's create <em>together.</em></h2>
+          <p class="p" style="font-size:16px">Campaigns, travel, fashion, beauty and lifestyle partnerships. Send me your idea.</p>
+          <a class="mail" href="mailto:contact.selenaluna@gmail.com">contact.selenaluna@gmail.com</a>
+        </div>
+        <a class="cta-mail" href="mailto:contact.selenaluna@gmail.com?subject=Collaboration%20with%20Selena%20Luna">Write me
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="foot">
+        <span class="wordmark">SELENA LUNA</span>
+        <a href="mailto:contact.selenaluna@gmail.com">Brand collaborations: contact.selenaluna@gmail.com</a>
+        <span>© 2026 Selena Luna</span>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'), film=document.querySelector('.film'), video=document.getElementById('film'),
+      bar=document.getElementById('bar'), hint=document.getElementById('hint');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var mobile=window.matchMedia('(max-width:860px), (hover:none) and (pointer:coarse)').matches;
+  var target=0, ready=false, ticking=false;
+
+  function progress(){
+    var r=film.getBoundingClientRect(), total=film.offsetHeight-window.innerHeight;
+    return Math.min(1,Math.max(0,-r.top/Math.max(total,1)));
+  }
+  function render(){
+    ticking=false;
+    var p=progress();
+    bar.style.transform='scaleY('+p+')';
+    hint.style.opacity=p>0.02?0:1;
+    nav.classList.toggle('solid', window.scrollY>film.offsetHeight-window.innerHeight*1.2);
+    if(ready && video.duration){
+      var t=p*(video.duration-0.05);
+      if(Math.abs(video.currentTime-t)>0.01){ if(video.fastSeek && mobile){video.fastSeek(t)} else {video.currentTime=t} }
+    }
+  }
+  function onScroll(){ if(!ticking){ ticking=true; requestAnimationFrame(render); } }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  render();
+  if(reduce) return;
+
+  var src=mobile?'assets/film-mobile.mp4':'assets/film.mp4';
+  fetch(src).then(function(r){return r.blob()}).then(function(b){
+    video.src=URL.createObjectURL(b);
+    video.addEventListener('loadeddata',function(){
+      ready=true; video.pause(); video.classList.add('ready'); render();
+    },{once:true});
+    video.load();
+  }).catch(function(){});
+  // iOS needs one user gesture before seeking paints frames
+  function prime(){ var pr=video.play(); if(pr&&pr.then){pr.then(function(){video.pause();render();}).catch(function(){})} window.removeEventListener('touchstart',prime); }
+  window.addEventListener('touchstart',prime,{passive:true});
+})();
+</script>
+</body>
+</html>
