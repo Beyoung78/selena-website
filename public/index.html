@@ -3,277 +3,383 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Selena Luna</title>
-<meta name="description" content="Travel, fitness and style. The everyday story on Instagram, the private side only for members.">
+<title>Selena Luna – Official Site | Travel, Fitness &amp; Style</title>
+<meta name="description" content="Official site of Selena Luna. Travel, fitness and style, golden hours and rooftop nights. The private side lives on FanStories.">
 <meta property="og:title" content="Selena Luna">
-<meta property="og:description" content="Travel, fitness and style. The private side only for members.">
+<meta property="og:description" content="Travel, fitness and style. Life, slightly more cinematic.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://theselenaluna.com/assets/img/cover.jpg">
 <meta property="og:url" content="https://theselenaluna.com/">
-<link rel="canonical" href="https://theselenaluna.com/">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://theselenaluna.com/">
+<link rel="alternate" hreflang="en" href="https://theselenaluna.com/">
+<link rel="alternate" hreflang="es" href="https://theselenaluna.com/">
+<link rel="preload" href="assets/fonts/bodoni-moda-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="assets/poster.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Selena Luna","url":"https://theselenaluna.com/","image":"https://theselenaluna.com/assets/img/cover.jpg","jobTitle":"Creator","knowsAbout":["Travel","Fitness","Fashion"],"sameAs":["https://www.instagram.com/selenaluna03/","https://fanstories.com/selenaluna03"],"email":"contact.selenaluna@gmail.com"}
+</script>
 <style>
 @font-face{font-family:"Bodoni Moda";font-style:normal;font-weight:400 900;font-display:swap;src:url(assets/fonts/bodoni-moda-latin-opsz-normal.woff2) format("woff2-variations"),url(assets/fonts/bodoni-moda-latin-opsz-normal.woff2) format("woff2")}
 @font-face{font-family:"Bodoni Moda";font-style:italic;font-weight:400 900;font-display:swap;src:url(assets/fonts/bodoni-moda-latin-opsz-italic.woff2) format("woff2-variations"),url(assets/fonts/bodoni-moda-latin-opsz-italic.woff2) format("woff2")}
-@font-face{font-family:Manrope;font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/manrope-latin-400-normal.woff2) format("woff2")}
-@font-face{font-family:Manrope;font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/manrope-latin-500-normal.woff2) format("woff2")}
-@font-face{font-family:Manrope;font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/manrope-latin-600-normal.woff2) format("woff2")}
-@font-face{font-family:Manrope;font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/manrope-latin-700-normal.woff2) format("woff2")}
-
-:root{--bg:#0E0B09;--card:#17120E;--card2:#1B1510;--ink:#F4EDE3;--muted:#CDBFAE;--dim:#A69684;--line:#2E251D;--line2:#3A2E23;--gold:#E6C99A;--serif:"Bodoni Moda",Georgia,serif;--sans:Manrope,system-ui,sans-serif}
+@font-face{font-family:Manrope;font-weight:400;font-display:swap;src:url(assets/fonts/manrope-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Manrope;font-weight:500;font-display:swap;src:url(assets/fonts/manrope-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Manrope;font-weight:600;font-display:swap;src:url(assets/fonts/manrope-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:Manrope;font-weight:700;font-display:swap;src:url(assets/fonts/manrope-latin-700-normal.woff2) format("woff2")}
+:root{--paper:#FBF6EF;--sand:#F3E8DA;--ink:#1C1511;--muted:#6B5A4C;--line:#E2D3C0;--gold:#B4862F;--gold2:#E6C77E;--terra:#C4573B;--sea:#1D6C74;--esp:#16100C;--esp2:#211812;
+  --serif:"Bodoni Moda",Didot,Georgia,serif;--sans:Manrope,system-ui,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
-::selection{background:var(--gold);color:var(--bg)}
 img{display:block;max-width:100%}
+::selection{background:var(--gold2);color:var(--ink)}
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
 
 /* nav */
-.nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding:20px clamp(18px,4vw,48px);transition:background .4s,backdrop-filter .4s}
-.nav.solid{background:rgba(14,11,9,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-.wordmark{font-family:var(--serif);font-size:21px;letter-spacing:.34em;text-decoration:none}
-.links{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(14px,2.4vw,30px);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
-.links a{text-decoration:none;color:var(--muted);transition:color .25s}
-.links a:hover{color:var(--ink)}
-.nav-join{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;background:var(--gold);color:var(--bg)!important;font-weight:700}
-@media(max-width:760px){.hide-sm{display:none}}
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px clamp(16px,4vw,48px);color:#fff;transition:background .4s,color .4s,box-shadow .4s}
+.nav.solid{background:rgba(251,246,239,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.logo{font-family:var(--serif);font-size:21px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.links{display:flex;align-items:center;gap:clamp(12px,2.2vw,28px);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.85}
+.links a:hover{opacity:1}
+.lang{display:inline-flex;min-height:38px;padding:3px;border-radius:999px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer;font:700 11px var(--sans);letter-spacing:.14em;opacity:.9}
+.lang span{display:grid;place-items:center;min-width:32px;border-radius:999px}
+html[lang="en"] .lang [data-l="en"],html[lang="es"] .lang [data-l="es"]{background:var(--gold2);color:var(--ink)}
+.nav-cta{display:inline-flex;align-items:center;min-height:42px;padding:0 20px;border-radius:999px;background:linear-gradient(120deg,var(--gold2),var(--gold));color:var(--ink)!important;opacity:1!important;white-space:nowrap}
+@media(max-width:820px){.hide-sm{display:none}.logo{font-size:15px;letter-spacing:.18em}.links{gap:8px}.nav-cta{min-height:38px;padding:0 13px;font-size:11px}.nav{padding:14px}}
 
-/* scroll film */
-.film{position:relative;height:360vh;background:var(--bg)}
-.stage{position:sticky;top:0;height:100vh;height:100dvh;overflow:hidden}
-.stage video,.stage .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.stage video{opacity:0;transition:opacity .4s}
-.stage video.ready{opacity:1}
-@media(max-width:860px){.stage video,.stage .poster{object-position:64% center}}
-.stage::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(14,11,9,.75) 0%,rgba(14,11,9,.25) 48%,rgba(14,11,9,0) 72%),linear-gradient(0deg,rgba(14,11,9,.9) 0%,rgba(14,11,9,0) 34%)}
-.copy{position:absolute;z-index:2;left:clamp(18px,6vw,96px);bottom:clamp(60px,12vh,140px);max-width:640px;display:flex;flex-direction:column;gap:22px}
-.kicker{margin:0;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
-.copy h1{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(46px,6.6vw,108px);line-height:.98;letter-spacing:-.02em}
-.copy h1 em{color:var(--gold)}
-.copy p.lead{margin:0;font-size:clamp(16px,1.35vw,19px);line-height:1.6;color:var(--muted);max-width:34ch}
-.actions{display:flex;flex-wrap:wrap;gap:12px}
-.cta-join{display:inline-flex;align-items:center;gap:12px;min-height:54px;padding:0 26px;border-radius:999px;background:var(--gold);color:var(--bg);font-weight:700;font-size:16px;text-decoration:none;transition:transform .3s,box-shadow .3s}
-.cta-join:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(230,201,154,.28)}
-.cta-join svg{transition:transform .3s}
-.cta-join:hover svg{transform:translateX(4px)}
-.cta-follow{display:inline-flex;align-items:center;min-height:54px;padding:0 24px;border-radius:999px;border:1px solid rgba(244,237,227,.35);color:var(--ink);font-weight:600;text-decoration:none;background:rgba(14,11,9,.25);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:border-color .3s}
-.cta-follow:hover{border-color:var(--gold)}
-.progress{position:absolute;z-index:3;right:clamp(18px,4vw,48px);top:50%;transform:translateY(-50%);width:2px;height:160px;background:rgba(244,237,227,.18);border-radius:2px;overflow:hidden}
-.progress span{display:block;width:100%;height:100%;background:var(--gold);transform-origin:top;transform:scaleY(0)}
-.hint{position:absolute;z-index:3;left:50%;bottom:22px;transform:translateX(-50%);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim);transition:opacity .4s}
+/* hero */
+.hero{position:relative;height:100vh;height:100dvh;min-height:640px;overflow:hidden;display:flex;align-items:flex-end;background:var(--esp);color:#fff}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero video{opacity:0;transition:opacity 1s}
+.hero video.ready{opacity:1}
+@media(max-width:860px){.hero video,.hero .poster{object-position:64% center}}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(22,16,12,.95) 0%,rgba(22,16,12,.45) 38%,rgba(22,16,12,0) 65%),linear-gradient(90deg,rgba(22,16,12,.7) 0%,rgba(22,16,12,0) 60%)}
+.hero-copy{position:relative;z-index:2;width:100%;max-width:1000px;padding:0 clamp(18px,6vw,96px) clamp(60px,10vh,110px);display:flex;flex-direction:column;gap:20px}
+.kicker{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold2)}
+.kicker::before{content:"";width:34px;height:1px;background:var(--gold2)}
+.hero h1{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(64px,12vw,190px);line-height:.86;letter-spacing:-.02em}
+.hero h1 .luna{display:block;font-style:italic;padding-left:.5em;
+  color:transparent;background:linear-gradient(100deg,#B4862F 0%,#E6C77E 22%,#FFF3D1 34%,#E6C77E 46%,#B4862F 60%,#E6C77E 80%,#B4862F 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;
+  filter:drop-shadow(0 2px 18px rgba(230,199,126,.35));animation:foil 6s ease-in-out infinite alternate}
+@keyframes foil{from{background-position:0% 50%}to{background-position:100% 50%}}
+.hero .lead{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.6vw,36px)}
+.hero .sub{margin:0;max-width:44ch;font-size:16px;line-height:1.65;color:rgba(255,255,255,.78)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;padding-top:4px}
+.btn-gold{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:999px;background:linear-gradient(120deg,var(--gold2),var(--gold));color:var(--ink);font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 12px 40px rgba(180,134,47,.35);transition:transform .3s,box-shadow .3s}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 50px rgba(180,134,47,.5)}
+.btn-line{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:999px;border:1.5px solid rgba(255,255,255,.7);color:#fff;font-weight:700;text-decoration:none;background:rgba(22,16,12,.25);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background .3s,color .3s}
+.btn-line:hover{background:#fff;color:var(--ink)}
+@media(max-width:860px){.actions{flex-direction:column;align-items:stretch}.hero h1{font-size:19vw}}
 
-/* sections */
-.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
-.section{padding-top:clamp(80px,11vw,140px)}
-.eyebrow{margin:0;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
-h2{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(38px,4.6vw,68px);line-height:1.03}
+/* marquee */
+.marquee{overflow:hidden;background:var(--esp);color:var(--gold2);padding:22px 0;border-top:1px solid rgba(230,199,126,.25)}
+.track{display:flex;gap:44px;width:max-content;animation:scroll 34s linear infinite;font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.6vw,36px);white-space:nowrap}
+.track span:nth-child(even){font-style:normal;color:var(--terra)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* type */
+.section{padding:clamp(80px,11vw,150px) 0}
+.eyebrow{margin:0;font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--terra)}
+h2{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(44px,6vw,92px);line-height:.98;letter-spacing:-.015em}
 h2 em{color:var(--gold)}
-.p{margin:0;font-size:18px;line-height:1.7;color:var(--muted)}
-.ribbon{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px 28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0;font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.4vw,32px);color:var(--muted)}
-.ribbon i{color:var(--gold);font-style:normal}
-.about{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(36px,6vw,80px)}
-.about figure{flex:1 1 360px;margin:0;max-width:560px}
-.about figure img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:26px}
-.about .txt{flex:1 1 360px;display:flex;flex-direction:column;gap:22px}
-.feed-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;padding-bottom:28px}
-.feed-link{font-size:14px;font-weight:600;letter-spacing:.08em;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:4px}
-.feed{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.feed figure{margin:0;overflow:hidden;border-radius:18px}
-.feed img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
-.feed figure:hover img{transform:scale(1.04)}
-.private{display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,64px);align-items:stretch;background:var(--card2);border:1px solid var(--line2);border-radius:30px;padding:clamp(22px,4vw,56px)}
-.private figure{flex:1 1 300px;margin:0;max-width:460px;position:relative;overflow:hidden;border-radius:22px;min-height:440px}
+.p{margin:0;font-size:18px;line-height:1.75;color:var(--muted)}
+
+/* about */
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(40px,7vw,110px);align-items:center}
+.arch{position:relative;max-width:520px}
+.arch img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:260px 260px 18px 18px}
+.arch::after{content:"";position:absolute;inset:-16px 16px 16px -16px;border:1px solid var(--gold);border-radius:260px 260px 18px 18px;z-index:-1}
+.about .txt{display:flex;flex-direction:column;gap:24px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.chips li{padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:14px;font-weight:600}
+.sign{font-family:var(--serif);font-style:italic;font-size:34px;color:var(--gold)}
+
+/* feed */
+.feedsec{background:var(--sand)}
+.feed-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;padding-bottom:32px}
+.tabs{display:inline-flex;padding:5px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+.tab{min-height:44px;padding:0 22px;border:0;border-radius:999px;background:transparent;color:var(--muted);font:700 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:background .25s,color .25s}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--gold2)}
+.feed{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.feed[hidden]{display:none}
+.feed figure{margin:0;overflow:hidden;border-radius:16px;background:var(--line)}
+.feed img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.feed figure:hover img{transform:scale(1.05)}
+.ig-link{display:inline-block;margin-top:28px;font-weight:700;letter-spacing:.06em;text-decoration:none;border-bottom:1.5px solid var(--gold);padding-bottom:4px}
+@media(max-width:700px){.feed{grid-template-columns:repeat(2,1fr);gap:10px}}
+
+/* private */
+.private{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,5vw,64px);padding:clamp(22px,4vw,56px);border-radius:28px;background:radial-gradient(120% 90% at 0% 0%,#3A2717,var(--esp) 60%);color:#F6EDE1;box-shadow:0 30px 80px rgba(22,16,12,.25)}
+.private figure{position:relative;margin:0;min-height:440px;overflow:hidden;border-radius:20px}
 .private figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.lock{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;color:var(--gold)}
-.lock span{font-size:12px;letter-spacing:.28em;text-transform:uppercase}
-.private .txt{flex:1 1 340px;display:flex;flex-direction:column;gap:20px;justify-content:center}
-.perks{list-style:none;margin:4px 0 0;padding:0}
-.perks li{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid var(--line2);font-size:16px}
-.perks li span:last-child{color:var(--gold)}
-.cta-private{margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:0 28px;border-radius:18px;background:var(--gold);color:var(--bg);font-weight:700;font-size:18px;text-decoration:none;transition:letter-spacing .35s}
-.cta-private:hover{letter-spacing:.04em}
-.wish{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:clamp(28px,4vw,48px);border-radius:26px;border:1px solid var(--gold);background:linear-gradient(120deg,rgba(230,201,154,.08),rgba(230,201,154,0) 60%)}
-.wish .t{font-family:var(--serif);font-style:italic;font-size:clamp(30px,3.4vw,46px);margin:0 0 8px}
-.cta-wish{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;border:1px solid var(--gold);text-decoration:none;font-weight:600;transition:background .3s,color .3s}
-.cta-wish:hover{background:var(--gold);color:var(--bg)}
-.collab{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:clamp(28px,4vw,48px);border-radius:26px;background:var(--card);border:1px solid var(--line)}
-.collab .mail{font-family:var(--serif);font-size:clamp(22px,2.6vw,34px);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:4px;word-break:break-all}
-.cta-mail{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;background:var(--gold);color:var(--bg);font-weight:700;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:700}
-footer{padding:clamp(80px,11vw,140px) 0 56px}
-.foot{border-top:1px solid var(--line);padding-top:36px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px;font-size:14px;color:var(--dim)}
-.foot a{text-decoration:none}
-.foot a:hover{color:var(--ink)}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.film{height:100vh}.hint,.progress{display:none}}
+.lock{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--gold2)}
+.lock span{font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase}
+.private .txt{display:flex;flex-direction:column;gap:20px;justify-content:center}
+.private .eyebrow{color:var(--gold2)}
+.private h2 em{color:var(--gold2)}
+.private .p{color:rgba(246,237,225,.75)}
+.perks{list-style:none;margin:0;padding:0}
+.perks li{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid rgba(230,199,126,.2)}
+.perks li span:last-child{color:var(--gold2);font-weight:600}
+.private .btn-gold{justify-content:space-between;border-radius:16px;min-height:64px;font-size:17px}
+
+/* duo */
+.duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.box{display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:clamp(28px,4vw,48px);border-radius:24px;background:#fff;border:1px solid var(--line);min-height:280px}
+.box .t{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(32px,3.4vw,48px);line-height:1.05}
+.mail{font-family:var(--serif);font-size:clamp(20px,2.2vw,28px);text-decoration:none;border-bottom:1px solid var(--gold);word-break:break-all;width:max-content;max-width:100%}
+.btn-dark{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;background:var(--ink);color:var(--gold2);font-weight:700;text-decoration:none;width:max-content;transition:transform .25s}
+.btn-dark:hover{transform:translateY(-2px)}
+.btn-out{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;border:1.5px solid var(--ink);font-weight:700;text-decoration:none;width:max-content;transition:background .25s,color .25s}
+.btn-out:hover{background:var(--ink);color:var(--gold2)}
+
+/* footer */
+footer{background:var(--esp);color:rgba(246,237,225,.7);padding:56px 0}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:22px;font-size:14px}
+.foot .logo{color:var(--gold2)}
+.foot a{text-decoration:none}.foot a:hover{color:#fff}
+.legal-link{padding:0;border:0;background:none;color:inherit;font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.legal{width:min(640px,calc(100vw - 32px));max-height:calc(100vh - 48px);padding:32px clamp(20px,4vw,40px);border-radius:24px;border:1px solid var(--line);background:var(--paper);color:var(--muted);box-shadow:0 30px 80px rgba(22,16,12,.3)}
+.legal::backdrop{background:rgba(22,16,12,.6);backdrop-filter:blur(6px)}
+.legal h3{margin:0 0 18px;font-family:var(--serif);font-weight:400;font-size:30px;color:var(--ink)}
+.legal h4{margin:20px 0 6px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra)}
+.legal p{margin:0;font-size:15px;line-height:1.65}
+.legal a{color:var(--gold)}
+.legal-x{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:16px;cursor:pointer}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 <header class="nav" id="nav">
-  <a class="wordmark" href="#top">SELENA LUNA</a>
+  <a class="logo" href="#top">Selena Luna</a>
   <nav class="links" aria-label="Main">
-    <a class="hide-sm" href="#about">About</a>
-    <a class="hide-sm" href="#feed">Feed</a>
-    <a class="hide-sm" href="#wishlist">Wishlist</a>
-    <a class="hide-sm" href="#contact">Brands</a>
-    <a class="nav-join" href="https://fanstories.com/selenaluna03" target="_blank" rel="noopener">Join me</a>
+    <a class="hide-sm" href="#about" data-i18n="nav_about">About</a>
+    <a class="hide-sm" href="#feed" data-i18n="nav_feed">Feed</a>
+    <a class="hide-sm" href="#private" data-i18n="nav_private">Members</a>
+    <a class="hide-sm" href="#brands" data-i18n="nav_brands">Brands</a>
+    <button class="lang" id="lang" type="button" aria-label="Español / English"><span data-l="en">EN</span><span data-l="es">ES</span></button>
+    <a class="nav-cta" href="https://fanstories.com/selenaluna03" target="_blank" rel="noopener" data-i18n="nav_join">Join me</a>
   </nav>
 </header>
 
 <main>
-  <section class="film" id="top" aria-label="Selena on her rooftop at blue hour">
-    <div class="stage">
-      <picture>
-        <source media="(max-width:860px)" srcset="assets/poster-mobile.jpg">
-        <img class="poster" src="assets/poster.jpg" alt="" fetchpriority="high">
-      </picture>
-      <video id="film" muted playsinline preload="none" aria-hidden="true"></video>
-      <div class="copy">
-        <p class="kicker">Travel, fitness and style</p>
-        <h1>Life, slightly<br><em>more cinematic.</em></h1>
-        <p class="lead">Golden hours, rooftop nights and slow mornings. The everyday story lives on Instagram. The rest is only for members.</p>
-        <div class="actions">
-          <a class="cta-join" href="https://fanstories.com/selenaluna03" target="_blank" rel="noopener">Join me on FanStories
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
-          </a>
-          <a class="cta-follow" href="https://www.instagram.com/selenaluna03/" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-right:10px"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg>Follow on Instagram</a>
-        </div>
+  <section class="hero" id="top" aria-label="Selena on a rooftop at golden hour">
+    <picture>
+      <source media="(max-width:860px)" srcset="assets/hero-mobile.jpg">
+      <img class="poster" src="assets/hero.jpg" alt="" fetchpriority="high">
+    </picture>
+    <video id="film" muted playsinline loop preload="auto" aria-hidden="true"></video>
+    <div class="hero-copy">
+      <span class="kicker" data-i18n="kicker">Travel · Fitness · Style</span>
+      <h1>Selena<span class="luna">Luna</span></h1>
+      <p class="lead" data-i18n="lead">Life, slightly more cinematic.</p>
+      <p class="sub" data-i18n="sub">Golden hours, rooftop nights and slow mornings. The everyday story lives on Instagram. The rest is only for members.</p>
+      <div class="actions">
+        <a class="btn-gold" href="https://fanstories.com/selenaluna03" target="_blank" rel="noopener"><span data-i18n="cta_fs">Join me on FanStories</span>
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+        <a class="btn-line" href="https://www.instagram.com/selenaluna03/" target="_blank" rel="noopener">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg>
+          <span data-i18n="cta_ig">Follow on Instagram</span></a>
       </div>
-      <div class="progress" aria-hidden="true"><span id="bar"></span></div>
-      <div class="hint" id="hint" aria-hidden="true">Scroll</div>
     </div>
   </section>
 
-  <div class="wrap">
-    <section class="section" aria-label="Highlights">
-      <div class="ribbon"><span>Golden hour</span><i aria-hidden="true">✦</i><span>Rooftop yoga</span><i aria-hidden="true">✦</i><span>First class</span><i aria-hidden="true">✦</i><span>Slow Sundays</span></div>
-    </section>
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span data-i18n="m1">Golden hour</span><span>✦</span><span data-i18n="m2">Rooftop nights</span><span>✦</span><span data-i18n="m3">First class</span><span>✦</span><span data-i18n="m4">Caribbean blue</span><span>✦</span><span data-i18n="m5">Sweat sessions</span><span>✦</span><span data-i18n="m6">Slow Sundays</span><span>✦</span>
+      <span data-i18n="m1">Golden hour</span><span>✦</span><span data-i18n="m2">Rooftop nights</span><span>✦</span><span data-i18n="m3">First class</span><span>✦</span><span data-i18n="m4">Caribbean blue</span><span>✦</span><span data-i18n="m5">Sweat sessions</span><span>✦</span><span data-i18n="m6">Slow Sundays</span><span>✦</span>
+    </div>
+  </div>
 
-    <section class="section" id="about">
-      <div class="about">
-        <figure><img src="assets/img/about.jpg" alt="Selena walking along the beach at golden hour in a white linen dress" loading="lazy"></figure>
-        <div class="txt">
-          <p class="eyebrow">Hi, I'm Selena</p>
-          <h2>Warm heart,<br><em>expensive taste.</em></h2>
-          <p class="p">I love sunsets, sweat sessions and a good outfit change. Follow along for travel, fitness and style, and come closer if you want the moments I don't post anywhere else.</p>
+  <section class="section" id="about">
+    <div class="wrap about">
+      <div class="arch rv"><img src="assets/img/about.jpg" alt="Selena in a white dress on the beach at sunset" loading="lazy"></div>
+      <div class="txt rv">
+        <p class="eyebrow" data-i18n="ab_eye">Hola, I'm Selena</p>
+        <h2 data-i18n="ab_h">Warm heart, <em>expensive taste.</em></h2>
+        <p class="p" data-i18n="ab_p">I live for sunsets, sweat sessions and a good outfit change. One week it's turquoise water, the next it's a rooftop in the city lights. Follow along for travel, fitness and style, and come closer if you want the moments I don't post anywhere else.</p>
+        <ul class="chips">
+          <li data-i18n="c1">Travel</li><li>Fitness</li><li data-i18n="c3">Style</li><li data-i18n="c4">Golden hour addict</li><li>English · Español</li>
+        </ul>
+        <span class="sign">Selena</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section feedsec" id="feed">
+    <div class="wrap">
+      <div class="feed-head rv">
+        <h2 data-i18n="feed_h">The <em>feed</em></h2>
+        <div class="tabs" role="tablist" aria-label="Feed">
+          <button class="tab" id="tab-travel" role="tab" aria-selected="true" aria-controls="panel-travel" data-i18n="tab_travel">Travel</button>
+          <button class="tab" id="tab-fit" role="tab" aria-selected="false" aria-controls="panel-fit">Fitness</button>
+          <button class="tab" id="tab-style" role="tab" aria-selected="false" aria-controls="panel-style" data-i18n="tab_style">Style</button>
         </div>
       </div>
-    </section>
-
-    <section class="section" id="feed">
-      <div class="feed-head">
-        <h2>The <em>feed</em></h2>
-        <a class="feed-link" href="https://www.instagram.com/selenaluna03/" target="_blank" rel="noopener">Follow @selenaluna03 on Instagram</a>
+      <div class="feed" id="panel-travel" role="tabpanel" aria-labelledby="tab-travel">
+        <figure><img src="assets/img/t1.jpg" alt="Selena in a white skirt in an old European alley" loading="lazy"></figure>
+        <figure><img src="assets/img/t4.jpg" alt="Selena at a turquoise waterfall" loading="lazy"></figure>
+        <figure><img src="assets/img/t3.jpg" alt="Selena in an orange satin dress by a window over the bay" loading="lazy"></figure>
+        <figure><img src="assets/img/t2.jpg" alt="Selena on a cobblestone street in a white dress" loading="lazy"></figure>
+        <figure><img src="assets/img/t6.jpg" alt="Selena on a jet ski at sea" loading="lazy"></figure>
+        <figure><img src="assets/img/t5.jpg" alt="Selena on a rooftop terrace at night" loading="lazy"></figure>
       </div>
-      <div class="feed">
-        <figure><img src="assets/img/jet.jpg" alt="Selena with champagne in a private jet cabin" loading="lazy"></figure>
-        <figure><img src="assets/img/yoga.jpg" alt="Selena doing yoga on a rooftop at sunrise" loading="lazy"></figure>
-        <figure><img src="assets/img/bw.jpg" alt="Black and white portrait of Selena in a white shirt" loading="lazy"></figure>
-        <figure><img src="assets/img/cafe.jpg" alt="Selena laughing at a colorful street cafe" loading="lazy"></figure>
+      <div class="feed" id="panel-fit" role="tabpanel" aria-labelledby="tab-fit" hidden>
+        <figure><img src="assets/img/f1.jpg" alt="Selena training with dumbbells in the gym" loading="lazy"></figure>
+        <figure><img src="assets/img/f2.jpg" alt="Selena with a volleyball on the beach" loading="lazy"></figure>
+        <figure><img src="assets/img/f4.jpg" alt="Selena doing yoga" loading="lazy"></figure>
+        <figure><img src="assets/img/f3.jpg" alt="Selena riding a jet ski" loading="lazy"></figure>
+        <figure><img src="assets/img/f5.jpg" alt="Selena lifting dumbbells" loading="lazy"></figure>
+        <figure><img src="assets/img/f6.jpg" alt="Selena at the beach volleyball court" loading="lazy"></figure>
       </div>
-    </section>
+      <div class="feed" id="panel-style" role="tabpanel" aria-labelledby="tab-style" hidden>
+        <figure><img src="assets/img/s1.jpg" alt="Selena in a white gown on stone stairs" loading="lazy"></figure>
+        <figure><img src="assets/img/s2.jpg" alt="Selena in a silver dress by the pool at night" loading="lazy"></figure>
+        <figure><img src="assets/img/s6.jpg" alt="Selena smiling in jeans and a white top" loading="lazy"></figure>
+        <figure><img src="assets/img/s4.jpg" alt="Selena in a red dress on a white sofa" loading="lazy"></figure>
+        <figure><img src="assets/img/s5.jpg" alt="Selena in a knitted maxi dress" loading="lazy"></figure>
+        <figure><img src="assets/img/s3.jpg" alt="Black and white photo of Selena on the beach in a sweater" loading="lazy"></figure>
+      </div>
+      <a class="ig-link" href="https://www.instagram.com/selenaluna03/" target="_blank" rel="noopener" data-i18n="ig_link">Follow @selenaluna03 on Instagram</a>
+    </div>
+  </section>
 
-    <section class="section" id="private">
-      <div class="private">
+  <section class="section" id="private">
+    <div class="wrap">
+      <div class="private rv">
         <figure>
           <img src="assets/img/private.jpg" alt="" loading="lazy">
           <div class="lock">
             <svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-            <span>Members only</span>
+            <span data-i18n="members">Members only</span>
           </div>
         </figure>
         <div class="txt">
-          <p class="eyebrow">Members only</p>
-          <h2>The <em>private</em> side.</h2>
-          <p class="p">Exclusive photo sets, behind-the-scenes moments and personal messages. Everything that never makes it to Instagram lives on my FanStories.</p>
+          <p class="eyebrow" data-i18n="pv_eye">Members only</p>
+          <h2 data-i18n="pv_h">The private <em>side.</em></h2>
+          <p class="p" data-i18n="pv_p">Exclusive photo sets, behind-the-scenes moments and private chats. Everything that never makes it to Instagram lives on my FanStories.</p>
           <ul class="perks">
-            <li><span>Exclusive photo sets</span><span>Every week</span></li>
-            <li><span>Personal messages</span><span>Included</span></li>
-            <li><span>Special sets and bundles</span><span>Members first</span></li>
+            <li><span data-i18n="pk1">Exclusive photo sets</span><span data-i18n="pk1v">Every week</span></li>
+            <li><span data-i18n="pk2">Behind the scenes</span><span data-i18n="pk2v">First look</span></li>
+            <li><span data-i18n="pk3">Private chats</span><span data-i18n="pk3v">Included</span></li>
           </ul>
-          <a class="cta-private" href="https://fanstories.com/selenaluna03" target="_blank" rel="noopener"><span>Join me on FanStories</span>
-            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-          </a>
+          <a class="btn-gold" href="https://fanstories.com/selenaluna03" target="_blank" rel="noopener"><span data-i18n="cta_fs">Join me on FanStories</span>
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="wishlist">
-      <div class="wish">
+  <section class="section" id="brands" style="padding-top:0">
+    <div class="wrap duo">
+      <div class="box rv">
         <div>
-          <p class="t">Spoil me a little</p>
-          <p class="p" style="font-size:16px">My wishlist on Throne. Gifts are always a surprise.</p>
+          <p class="eyebrow" data-i18n="w_eye">Wishlist</p>
+          <p class="t" data-i18n="w_t">Spoil me a little.</p>
+          <p class="p" style="font-size:16px;margin-top:10px" data-i18n="w_p">My wishlist on Throne. Gifts are always a surprise, and every one gets a thank-you.</p>
         </div>
-        <a class="cta-wish" href="https://throne.com/selenaluna" target="_blank" rel="noopener">Open my wishlist
-          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-        </a>
+        <a class="btn-out" href="https://throne.com/selenaluna" target="_blank" rel="noopener"><span data-i18n="w_cta">Open my wishlist</span> →</a>
       </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="collab">
-        <div style="display:flex;flex-direction:column;gap:14px">
-          <p class="eyebrow">Brands &amp; collaborations</p>
-          <h2>Let's create <em>together.</em></h2>
-          <p class="p" style="font-size:16px">Campaigns, travel, fashion, beauty and lifestyle partnerships. Send me your idea.</p>
+      <div class="box rv">
+        <div>
+          <p class="eyebrow" data-i18n="b_eye">Brands &amp; collaborations</p>
+          <p class="t" data-i18n="b_t">Let's create together.</p>
+          <p class="p" style="font-size:16px;margin:10px 0 16px" data-i18n="b_p">Campaigns in travel, fashion, beauty, fitness and lifestyle. Send me your idea.</p>
           <a class="mail" href="mailto:contact.selenaluna@gmail.com">contact.selenaluna@gmail.com</a>
         </div>
-        <a class="cta-mail" href="mailto:contact.selenaluna@gmail.com?subject=Collaboration%20with%20Selena%20Luna">Write me
-          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-        </a>
+        <a class="btn-dark" href="mailto:contact.selenaluna@gmail.com?subject=Collaboration%20with%20Selena%20Luna"><span data-i18n="b_cta">Write me</span> →</a>
       </div>
-    </section>
-
-    <footer>
-      <div class="foot">
-        <span class="wordmark">SELENA LUNA</span>
-        <a href="mailto:contact.selenaluna@gmail.com">Brand collaborations: contact.selenaluna@gmail.com</a>
-        <span>© 2026 Selena Luna</span>
-      </div>
-    </footer>
-  </div>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="logo">Selena Luna</span>
+    <span style="display:flex;flex-wrap:wrap;gap:18px"><a href="https://www.instagram.com/selenaluna03/" target="_blank" rel="noopener">Instagram</a><a href="https://fanstories.com/selenaluna03" target="_blank" rel="noopener">FanStories</a><a href="https://throne.com/selenaluna" target="_blank" rel="noopener">Throne</a></span>
+    <span style="display:flex;flex-wrap:wrap;gap:18px;align-items:center"><button class="legal-link" id="legal-open" type="button" data-i18n="lg_link">Legal &amp; Privacy</button><span>© 2026 Selena Luna</span></span>
+  </div>
+</footer>
+
+<dialog class="legal" id="legal" aria-labelledby="legal-h">
+  <button class="legal-x" id="legal-close" type="button" aria-label="Close">✕</button>
+  <h3 id="legal-h" data-i18n="lg_h">Legal &amp; Privacy</h3>
+  <h4 data-i18n="lg_1h">About this site</h4>
+  <p data-i18n="lg_1p">This is the official website of Selena Luna. For any questions, requests or legal matters, write to <a href="mailto:contact.selenaluna@gmail.com">contact.selenaluna@gmail.com</a>.</p>
+  <h4 data-i18n="lg_2h">Privacy</h4>
+  <p data-i18n="lg_2p">No cookies, no ads, no tracking. This site does not collect personal data. Your language choice is saved only in your own browser. The site is hosted by Cloudflare, which processes technical data such as your IP address to deliver it securely, and counts visits anonymously without cookies or personal profiles.</p>
+  <h4 data-i18n="lg_3h">External links</h4>
+  <p data-i18n="lg_3p">Links to FanStories, Throne and Instagram lead to other services. Their own terms, age checks and privacy policies apply there.</p>
+  <h4 data-i18n="lg_4h">Copyright</h4>
+  <p data-i18n="lg_4p">All photos and videos on this site © 2026 Selena Luna. Please don't use them without permission.</p>
+</dialog>
 
 <script>
 (function(){
-  var nav=document.getElementById('nav'), film=document.querySelector('.film'), video=document.getElementById('film'),
-      bar=document.getElementById('bar'), hint=document.getElementById('hint');
+  var ES={
+    nav_about:'Sobre mí', nav_feed:'Feed', nav_private:'Miembros', nav_brands:'Marcas', nav_join:'Únete',
+    kicker:'Viajes · Fitness · Estilo', lead:'La vida, un poco más de película.',
+    sub:'Atardeceres dorados, noches en la terraza y mañanas lentas. Lo de cada día está en Instagram. Lo demás es solo para miembros.',
+    cta_fs:'Únete en FanStories', cta_ig:'Sígueme en Instagram',
+    m1:'Hora dorada', m2:'Noches en la terraza', m3:'Primera clase', m4:'Azul Caribe', m5:'Entrenos con sudor', m6:'Domingos lentos',
+    ab_eye:'Hola, soy Selena', ab_h:'Corazón cálido, <em>gustos caros.</em>',
+    ab_p:'Vivo para los atardeceres, los buenos entrenos y un buen cambio de outfit. Una semana es agua turquesa, la siguiente una terraza entre las luces de la ciudad. Sígueme para viajes, fitness y estilo, y acércate si quieres los momentos que no publico en ningún otro lugar.',
+    c1:'Viajes', c3:'Estilo', c4:'Adicta a la hora dorada',
+    feed_h:'El <em>feed</em>', tab_travel:'Viajes', tab_style:'Estilo', ig_link:'Sigue a @selenaluna03 en Instagram',
+    members:'Solo miembros', pv_eye:'Solo miembros', pv_h:'El lado <em>privado.</em>',
+    pv_p:'Sesiones de fotos exclusivas, momentos detrás de cámaras y chats privados. Todo lo que nunca llega a Instagram está en mi FanStories.',
+    pk1:'Sesiones de fotos exclusivas', pk1v:'Cada semana', pk2:'Detrás de cámaras', pk2v:'Primero para ti', pk3:'Chats privados', pk3v:'Incluido',
+    w_eye:'Lista de deseos', w_t:'Consiénteme un poquito.', w_p:'Mi lista de deseos en Throne. Los regalos siempre son una sorpresa, y cada uno recibe un gracias.', w_cta:'Ver mi lista',
+    b_eye:'Marcas y colaboraciones', b_t:'Creemos algo juntos.', b_p:'Campañas de viajes, moda, belleza, fitness y estilo de vida. Envíame tu idea.', b_cta:'Escríbeme',
+    lg_link:'Aviso legal y privacidad', lg_h:'Aviso legal y privacidad', lg_1h:'Sobre este sitio',
+    lg_1p:'Este es el sitio oficial de Selena Luna. Para preguntas, solicitudes o asuntos legales, escribe a <a href="mailto:contact.selenaluna@gmail.com">contact.selenaluna@gmail.com</a>.',
+    lg_2h:'Privacidad', lg_2p:'Sin cookies, sin anuncios, sin rastreo. Este sitio no recopila datos personales. Tu elección de idioma se guarda solo en tu propio navegador. El sitio está alojado en Cloudflare, que procesa datos técnicos como tu dirección IP para entregarlo de forma segura y cuenta visitas de forma anónima, sin cookies ni perfiles personales.',
+    lg_3h:'Enlaces externos', lg_3p:'Los enlaces a FanStories, Throne e Instagram llevan a otros servicios. Allí aplican sus propios términos, verificaciones de edad y políticas de privacidad.',
+    lg_4h:'Derechos de autor', lg_4p:'Todas las fotos y videos de este sitio © 2026 Selena Luna. Por favor, no los uses sin permiso.'
+  };
+  var els=[].slice.call(document.querySelectorAll('[data-i18n]')), EN={};
+  els.forEach(function(e){ var k=e.getAttribute('data-i18n'); if(!(k in EN)) EN[k]=e.innerHTML; });
+  var lang='en';
+  function apply(){ document.documentElement.lang=lang; els.forEach(function(e){ var k=e.getAttribute('data-i18n'); var v=lang==='es'&&ES[k]!==undefined?ES[k]:EN[k]; if(e.innerHTML!==v) e.innerHTML=v; }); }
+  try{ lang=localStorage.getItem('sl_lang')||''; }catch(e){ lang=''; }
+  if(lang!=='en'&&lang!=='es') lang=(navigator.language||'en').toLowerCase().indexOf('es')===0?'es':'en';
+  apply();
+  document.getElementById('lang').addEventListener('click',function(){ lang=lang==='es'?'en':'es'; try{localStorage.setItem('sl_lang',lang)}catch(e){} apply(); });
+
+  // nav
+  var nav=document.getElementById('nav'), hero=document.querySelector('.hero');
+  function onScroll(){ nav.classList.toggle('solid', window.scrollY>hero.offsetHeight-80); }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var mobile=window.matchMedia('(max-width:860px), (hover:none) and (pointer:coarse)').matches;
-  var target=0, ready=false, ticking=false;
-
-  function progress(){
-    var r=film.getBoundingClientRect(), total=film.offsetHeight-window.innerHeight;
-    return Math.min(1,Math.max(0,-r.top/Math.max(total,1)));
+  // hero video loop
+  var v=document.getElementById('film');
+  if(!reduce){
+    v.src=window.matchMedia('(max-width:860px)').matches?'assets/hero-mobile.mp4':'assets/hero.mp4';
+    v.addEventListener('playing',function(){v.classList.add('ready')},{once:true});
+    var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){ function go(){v.play();window.removeEventListener('touchstart',go);} window.addEventListener('touchstart',go,{passive:true}); });
+    if('IntersectionObserver' in window){ new IntersectionObserver(function(e){ e[0].isIntersecting?v.play().catch(function(){}):v.pause(); }).observe(hero); }
   }
-  function render(){
-    ticking=false;
-    var p=progress();
-    bar.style.transform='scaleY('+p+')';
-    hint.style.opacity=p>0.02?0:1;
-    nav.classList.toggle('solid', window.scrollY>film.offsetHeight-window.innerHeight*1.2);
-    if(ready && video.duration){
-      var t=p*(video.duration-0.05);
-      if(Math.abs(video.currentTime-t)>0.01){ if(video.fastSeek && mobile){video.fastSeek(t)} else {video.currentTime=t} }
-    }
-  }
-  function onScroll(){ if(!ticking){ ticking=true; requestAnimationFrame(render); } }
-  window.addEventListener('scroll',onScroll,{passive:true});
-  window.addEventListener('resize',onScroll);
-  render();
-  if(reduce) return;
-
-  var src=mobile?'assets/film-mobile.mp4':'assets/film.mp4';
-  fetch(src).then(function(r){return r.blob()}).then(function(b){
-    video.src=URL.createObjectURL(b);
-    video.addEventListener('loadeddata',function(){
-      ready=true; video.pause(); video.classList.add('ready'); render();
-    },{once:true});
-    video.load();
-  }).catch(function(){});
-  // iOS needs one user gesture before seeking paints frames
-  function prime(){ var pr=video.play(); if(pr&&pr.then){pr.then(function(){video.pause();render();}).catch(function(){})} window.removeEventListener('touchstart',prime); }
-  window.addEventListener('touchstart',prime,{passive:true});
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  tabs.forEach(function(b){ b.addEventListener('click',function(){ tabs.forEach(function(x){ var on=x===b; x.setAttribute('aria-selected',on); document.getElementById(x.getAttribute('aria-controls')).hidden=!on; }); }); });
+  // reveal
+  if(!reduce && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); },{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+    document.querySelectorAll('.feed figure').forEach(function(el,i){ el.classList.add('rv'); el.style.transitionDelay=((i%3)*90)+'ms'; io.observe(el); });
+  } else { document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); }); }
+  // legal
+  var d=document.getElementById('legal');
+  document.getElementById('legal-open').addEventListener('click',function(){ d.showModal?d.showModal():d.setAttribute('open',''); });
+  document.getElementById('legal-close').addEventListener('click',function(){ d.close?d.close():d.removeAttribute('open'); });
+  d.addEventListener('click',function(e){ if(e.target===d) d.close(); });
 })();
 </script>
 </body>
