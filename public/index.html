@@ -185,7 +185,7 @@ footer{background:var(--esp);color:rgba(246,237,225,.6);padding:clamp(70px,9vw,1
 /* reveal */
 .rv{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.marquee .track,.track{animation:scroll 34s linear infinite!important}}
 </style>
 </head>
 <body>
@@ -208,7 +208,7 @@ footer{background:var(--esp);color:rgba(246,237,225,.6);padding:clamp(70px,9vw,1
         <source media="(max-width:860px)" srcset="assets/hero-mobile.jpg">
         <img class="poster" src="assets/hero.jpg" alt="" fetchpriority="high">
       </picture>
-      <video id="film" muted playsinline loop preload="auto" aria-hidden="true"></video>
+      <video id="film" autoplay muted playsinline loop preload="auto" aria-hidden="true"></video>
     </div>
     <div class="hero-copy">
       <span class="kicker" data-i18n="kicker">Style · Fitness · Travel</span>
@@ -404,7 +404,7 @@ footer{background:var(--esp);color:rgba(246,237,225,.6);padding:clamp(70px,9vw,1
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   // hero video loop
   var v=document.getElementById('film');
-  if(!reduce){
+  {
     v.src=window.matchMedia('(max-width:860px)').matches?'assets/hero-mobile.mp4':'assets/hero.mp4';
     v.addEventListener('playing',function(){v.classList.add('ready')},{once:true});
     var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){ function go(){v.play();window.removeEventListener('touchstart',go);} window.addEventListener('touchstart',go,{passive:true}); });
